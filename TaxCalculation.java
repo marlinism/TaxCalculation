@@ -1,12 +1,13 @@
 
-public class TaxCalculation {
+public class TaxCalculation extends App{
+	
 	private double income;
 	
 	public TaxCalculation(double incomeInput) {
 		setIncome(incomeInput);
 	}
    
-   //post: set income and also check
+	//post: set income and also check
 	private void setIncome(double incomeInput) {
       if(incomeInput < 0) {
     	  throw new IllegalArgumentException();
