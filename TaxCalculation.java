@@ -3,12 +3,26 @@ public class TaxCalculation extends App{
 	
 	private double income;
 	
+   //post: get name of the program
+	public void getName() {
+		System.out.println("\tTAX SERVICE");
+	}
+	
+   //post: get note
+	public void getNote() {
+		System.out.println("Caution: This calculation is only correct when the tax payer is single");
+	}
+	
+	public TaxCalculation() {
+		this(0);
+	}
+	
 	public TaxCalculation(double incomeInput) {
 		setIncome(incomeInput);
 	}
    
 	//post: set income and also check
-	private void setIncome(double incomeInput) {
+	public void setIncome(double incomeInput) {
       if(incomeInput < 0) {
     	  throw new IllegalArgumentException();
       }

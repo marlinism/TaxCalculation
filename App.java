@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
-public class App {
+abstract class App {
+	
+	abstract void getName(); //abstract method to get name of the program
+	abstract void getNote(); //abstract method to get note (optional)
 	
 	//a method to check if the client want to keep using the program
 	public static boolean calculateAgain(Scanner input) {
@@ -8,7 +11,7 @@ public class App {
 		boolean check = false;
 			
 		do {
-			System.out.println("Do you want to continue?");
+			System.out.println("Do you want to continue? (Yes/No)");
 				
 			String answer = input.next();
 			answer = answer.toUpperCase();

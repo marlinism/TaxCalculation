@@ -5,9 +5,11 @@ public class ClientTaxCalculation {
 	public static void main(String[] args) {
 		boolean mode = false;
 		
+		TaxCalculation first = new TaxCalculation();
+		
 		//header of the project
-		System.out.println("\tTAX SERVICE");
-		System.out.println("Caution: This calculation is only correct when the tax payer is single");
+		first.getName();
+		first.getNote();
 		
 		do {
 			//ask for the income 
@@ -16,7 +18,7 @@ public class ClientTaxCalculation {
 			System.out.print("$ ");
 			Scanner input = new Scanner(System.in);
 			double income = input.nextDouble();
-			TaxCalculation first = new TaxCalculation(income);
+			first.setIncome(income);
 			
 			//calculate tax 
 			first.getTaxCalculation(income);
